@@ -6,7 +6,10 @@ def reverseString(s,start,end):
     s[start] = s[end]
     s[end] = temp
     reverseString(s,start+1, end -1)
-    return s
+    
 
-s = ['h','e','l','l']
-print("Reversed String => ", reverseString(s,0,len(s)-1))
+s = "abcd"
+st = list(s)
+reverseString(st,0,len(s)-1)
+
+print("Reversed String => ", "".join(st))
