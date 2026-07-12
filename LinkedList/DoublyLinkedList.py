@@ -58,12 +58,11 @@ def insertAtPosition(position,data,head):
     curr = head
     temp = None
     count = 1
+
     while(count < position):
         temp = curr
         curr = curr.next
-        
         count += 1
-    print("COUNT => ", count)
     
     curr.next = newNode
     newNode.prev = curr
