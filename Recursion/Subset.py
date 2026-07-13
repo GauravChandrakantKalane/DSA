@@ -1,4 +1,4 @@
-def subset(arr, index, result, ans):
+def subset(arr,index,result,ans):
     if(index >= len(arr)):
         ans.append(result[:])
         return
@@ -7,9 +7,10 @@ def subset(arr, index, result, ans):
     result.append(arr[index])
     subset(arr,index+1,result,ans)
     result.pop()
-    return ans
+    return
 
-arr = [1,2,3]
-
-ans = subset(arr,0,[],[])
-print("FINAL ANS => ", ans)
+str = "ab"
+result = []
+ans = []
+subset(str,0,result,ans)
+print("ANS => ", ans)
