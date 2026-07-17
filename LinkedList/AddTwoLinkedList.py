@@ -62,6 +62,7 @@ def addList(head1,head2, ans):
             newNode = Node(digit)
             ans = insertAtTail(ans,digit)
         else:
+            carry = 0
             newNode = Node(sum)
             ans = insertAtTail(ans,sum)
         temp1 = temp1.next
@@ -74,6 +75,7 @@ def addList(head1,head2, ans):
             newNode = Node(digit)
             ans = insertAtTail(ans,digit)
         else:
+            carry = 0
             newNode = Node(sum)
             ans = insertAtTail(ans,sum)
         temp1 = temp1.next
@@ -85,6 +87,7 @@ def addList(head1,head2, ans):
             newNode = Node(digit)
             ans = insertAtTail(ans,digit)
         else:
+            carry = 0
             newNode = Node(sum)
             ans = insertAtTail(ans,sum)
         temp2 = temp2.next
@@ -102,18 +105,22 @@ def addTwoList(head1,head2,ans):
     ans = addList(head1,head2,ans)
 
     ans = reverseList(ans)
+    temp = ans
+    while(temp.data != 0):
+        temp = temp.next
+    ans = temp
     return ans
 
 
 head1 = None
 head2 = None
-head1 = insertAtTail(head1,6)
-head1 = insertAtTail(head1,5)
 head1 = insertAtTail(head1,4)
+head1 = insertAtTail(head1,5)
+# head1 = insertAtTail(head1,4)
 printList(head1)
-head2 = insertAtTail(head2,7)
-head2 = insertAtTail(head2,8)
-head2 = insertAtTail(head2,2)
+head2 = insertAtTail(head2,3)
+head2 = insertAtTail(head2,4)
+head2 = insertAtTail(head2,5)
 printList(head2)
 sumHead = None
 sumHead = addTwoList(head1,head2,sumHead)
