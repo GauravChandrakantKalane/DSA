@@ -44,8 +44,7 @@ def middleOfList(head):
         if(fast.next is not None):
             fast = fast.next
         slow = slow.next
-    print("Middle of List =>",slow.data)
-    return slow
+    return slow 
 
 def reverseList(head):
     if(head == None):
